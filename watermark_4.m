@@ -137,8 +137,7 @@ imshow((mat88'));     %image using the lsb bits of all pixel values
 title('LSB bit');
 
 recomb=[];    %recombined image
-% recomb= (2*(2 * (2 * (2 * (2 * (2 * (2 * mat11 + mat2) + mat3) + mat4) + mat5) + mat6) + mat7)+mat8);
-recomb=(128*mat1)+(64*mat2)+(32*mat11)+(16*mat4)+(8*mat5)+(4*mat6)+(2*mat7)+(1*mat8);
+recomb=(128*mat1)+(64*mat2)+(32*mat3)+(16*mat4)+(8*mat5)+(4*mat6)+(2*mat7)+(1*mat11);
 subplot(2,5,10);
 imshow(uint8(recomb'));      %plotting the image after recombination of all planes except lsb plane
 title('Reconstructed Image');
